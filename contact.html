@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewpoint" content="width=device-width, intial-scale=1">
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="./css/stylesheet.css">
+
+   </head>
+  
+
+<body>
+    <nav>
+       <div class="navbar">
+        <a href="#" class="logo"> K's Ice Cream</a>
+
+        <!--Hamburger menu-->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#">Home</a></li>
+
+            <li>
+              <a href="#" class="submenu-toggle">Product Options ▾</a>
+              <ul class="submenu">
+                <li><a href="#">Sundaes</a></li>
+                <li><a href="#">Cones</a></li>
+                <li><a href="#">Waffles and Pancakes</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#" class="submenu-toggle">Store ▾</a>
+              <ul class="submenu">
+                <li><a href="#">Storefront</a></li>
+                <li><a href="#">Seating Area</a></li>
+                <li><a href="#">Parking Area</a></li>
+              </ul>
+            </li>
+
+                <li><a href="./About.html">About</a></li>
+                <li><a href="./Contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!--Navigation Ends-->
+    <center>
+        <h1> Contact Us</h1>
+    </center>
+
+    <div class="container"
+    <form>
+        <input id="fname" type="text" name="firstname" placeholder="Your name..">
+        <input id="lname" type="text" name="lastname" placeholder="Your last name..">
+        <input id="ename" type="text" name="lastname" placeholder="Your email..">
+        <textarea id="subject" name="subject" placeholder="write soemthing.."
+          style="height: 200px;"></textarea> 
+
+          <center> <input type="submit" value="Submit" id="submit"></center>
+    </form>
+</div>
+
+</body>
+
+            
+        
+     
+    
+
+
+
+
+
+    <footer>
+  <div class="footer-logo">
+    <h2>K's Ice Cream</h2>
+    <p>Sweet treats that brings the people together.</p>
+  </div>
+
+  <div class="footer-links">
+    <h3>Quick Links</h3>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Ice Cream Flavours</a></li>
+      <li><a href="#">Store Gallery</a></li>
+      <li><a href="#">Our Blog</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-contact">
+    <h3>Contact Us</h3>
+    <p>📍 145 Florida Road, Durban, KZN</p>
+    <p>📞 063 521 4040</p>
+    <p>✉️ info@k'sicecream.com</p>
+    <div class="footer-social">
+      <a href="#">🌐</a>
+      <a href="#">📘</a>
+      <a href="#">🐦</a>
+      <a href="#">📸</a>
+    </div>
+  </div>
+
+  <div class="footer-newsletter">
+    <h3>Newsletter</h3>
+    <p>Subscribe for sweet special offers and updates.</p>
+    <form>
+      <input type="email" placeholder="Enter your email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+
+
+
+
+
+
+
+
+
+
+       
+
+
+
+
+
+
+
+
+
+
+
+
+</footers>
+
+<script>
+    const hamburger = document.getElementedById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    const submenuToggles = document.querySelectforAll('.submenu-toggle');
+
+    //Toogle hamburger menu open/close
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('open');
+    })
+
+    //Toogle submenu on mobile tap
+    submenuToggles.forEach(toggle => {
+        toggle.addEventListener('click', (e) => {
+            if(window.innerWidth <= 768) {
+                e.preventDefault();
+                const submenu = toggle.nextElementSibling;
+                submenu.classList.toggle('open');
+            }
+        });
+    });
+</script>
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
